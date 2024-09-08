@@ -8,7 +8,9 @@ Skip connections and batch normalization are two majorly used methods to solve v
 - **SkipBlock Class**:
 The SkipBlock class represents a residual block with optional skip connections. It consists of two convolutional layers, each followed by batch normalization and ReLU activation. The class supports channel dimension adjustments via a 1x1 convolution if the downsample flag is set. Skip connections enable the block to add the input to the output, allowing information to bypass layers, enhancing learning efficiency.
 
-The main class stacks multiple SkipBlock instances to create a deep hierarchical network. The architecture begins with a convolutional layer followed by max-pooling. Skip connections are utilized to allow information flow across blocks. The network concludes with two fully connected layers (fc1 and fc2) for classification. The model’s depth and skip connection usage are configurable, making it adaptable for various scenarios.
+- The main class stacks multiple SkipBlock instances to create a deep hierarchical network. The architecture begins with a convolutional layer followed by max-pooling. Skip connections are 
+  utilized to allow information flow across blocks. The network concludes with two fully connected layers (fc1 and fc2) for classification. The model’s depth and skip connection usage are 
+  configurable, making it adaptable for various scenarios.
 
 - **Batch Normalization**:
 Batch normalization normalizes the activations of each layer, reducing internal covariate shift and providing a regularization effect. It stabilizes the training process, accelerates convergence, and allows for the use of higher learning rates.
